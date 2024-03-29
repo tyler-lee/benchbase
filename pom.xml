@@ -106,6 +106,20 @@
                     <version>8.0.30</version>
                     <scope>runtime</scope>
                 </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>apsaradb-mysql</id>
+            <activation>
+                <property>
+                    <name>env.BENCHBASE_PROFILE</name>
+                    <value>mysql</value>
+                </property>
+            </activation>
+            <properties>
+                <classifier>mysql</classifier>
+            </properties>
+            <dependencies>
                 <dependency>
                     <groupId>com.aliyun</groupId>
                     <artifactId>aliyun-encdb-mysql-jdbc</artifactId>
